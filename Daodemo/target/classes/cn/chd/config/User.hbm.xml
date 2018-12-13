@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+     "-//Hibernate/hibernate-Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.chd.config">
+
+	<!--类名为User，表名也为User -->
+	<class name="User" table="new_table">
+
+		<!--主键映射，属性名为id，列名也为id -->
+		<id name="id" column="id">
+			<!--根据底层数据库主键自动增长 -->
+			<generator class="native"></generator>
+		</id>
+
+		<!--非主键映射，属性和列名一一对应 -->
+		<property name="name" column="name" />
+	</class>
+</hibernate-mapping>
