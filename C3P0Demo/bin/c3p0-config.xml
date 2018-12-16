@@ -1,0 +1,12 @@
+<c3p0-config>
+    <named-config name="mysqlConnection">
+        <property name="user">root</property>
+        <property name="password">268514</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/datadesign?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT&useSSL=false&allowPublicKeyRetrieval=true</property>
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        
+        <property name="initialPoolSize">20</property>
+        <property name="maxPoolSize">25</property>
+        <property name="minPoolSize">5</property>
+    </named-config>
+</c3p0-config>
