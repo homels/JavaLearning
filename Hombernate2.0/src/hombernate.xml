@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hombernate>
+    <class name="test.HomUser" table="user" >    
+        <property name="name" type="java.lang.String"/>
+        <property name="age" type="java.lang.Integer" />              
+    </class>
+</hombernate>
