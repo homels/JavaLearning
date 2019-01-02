@@ -6,6 +6,7 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 /**
  * 创建时间：2018年12月13日 下午3:55:24
@@ -130,15 +131,45 @@ public class DaoMethod {
 					+ Thread.currentThread().getStackTrace()[1].getMethodName() + "> at line 112)");
 		}
 	}
+	
+	/**
+	 * List
+	 * TODO  select * from clazz where fieldName between low and high
+	 */
+	public List select(Class clazz,String fieldName,int low,int high) {
+		Session session = config.getSession();
+		List list = null;
+		if(session != null) {
+			Transaction transaction = session.beginTransaction();
+			try {
+				transaction.begin();
+				Criteria crtiteria = session.createCriteria(clazz);
+				crtiteria.add(Restrictions.between(fieldName, low, high));
+				list = crtiteria.list();
+				transaction.commit();
+			} catch(Exception e) {
+				transaction.rollback();
+			} finally {
+				session.close();
+			}
+		} else {
+			System.err.println("查询操作时的空指针(NullPoint when Insert)" + this.getClass().getName() + "<"
+					+ Thread.currentThread().getStackTrace()[1].getMethodName() + "> at line 140");
+		}
+		return list;
+	}
 
-//	public static void main(String[] args) {
-//		// User user = new User();
-//		// user.setName("newUser2");
+//	public List select (Class clazz,String filedName,) {
+//		
+//	}
+	public static void main(String[] args) {
+		// User user = new User();
+		// user.setName("newUser2");
 //		User user = new User();
 //		user.setId(2);
 //		user.setName("updateuser");
 //		new DaoMethod("MYSQL").update(user, User.class);
-////		List<User> list = new DaoMethod("MYSQL").select(User.class);
-////		System.out.println(list.get(0).getName());
-//	}
+		List<User> list = new DaoMethod("MYSQL").select(User.class,"id",1,2);
+		System.out.println(list.size());
+	}
 }

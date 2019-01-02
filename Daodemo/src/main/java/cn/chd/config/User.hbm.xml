@@ -15,5 +15,6 @@
 
 		<!--非主键映射，属性和列名一一对应 -->
 		<property name="name" column="name" />
+		<property name = "age" column = "age"/> 
 	</class>
 </hibernate-mapping>

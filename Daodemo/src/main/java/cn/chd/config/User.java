@@ -15,6 +15,13 @@ package cn.chd.config;
 public class User {
 	int id;
 	String name;
+	double age;
+	public double getAge() {
+		return age;
+	}
+	public void setAge(double age) {
+		this.age = age;
+	}
 	public int getId() {
 		return id;
 	}

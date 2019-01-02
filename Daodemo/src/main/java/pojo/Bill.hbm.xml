@@ -2,19 +2,23 @@
 <!DOCTYPE hibernate-mapping PUBLIC
      "-//Hibernate/hibernate-Mapping DTD 3.0//EN"
     "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<hibernate-mapping package="cn.chd.config">
+<hibernate-mapping package="pojo">
 
 	<!--类名为User，表名也为User -->
-	<class name="User" table="new_table">
+	<class name="Bill" table="record">
 
 		<!--主键映射，属性名为id，列名也为id -->
-		<id name="id" column="id">
+		<id name="id" column="recordId">
 			<!--根据底层数据库主键自动增长 -->
 			<generator class="native"></generator>
 		</id>
 
 		<!--非主键映射，属性和列名一一对应 -->
-		<property name="name" column="name" />
-		<property name = "age" column = "age"/> 
+		<property name="icId" column="icId" />
+		<property name = "inOrOut" column = "inOrOut"/>
+		<property name="ic2Id" column="ic2Id"></property> 
+		<property name="date" column="date"></property>
+		<property name="sum" column="sum"></property>
+		<property name="remaining" column="remaining"></property>
 	</class>
 </hibernate-mapping>
