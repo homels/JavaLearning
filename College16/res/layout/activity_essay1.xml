@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}"
+    android:background="#ffffff" >
+
+<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="如何利用大学资源"
+        android:gravity="center" 
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"/>
+	<WebView
+	    android:id="@+id/about_version"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="30dp" />
+		<TextView 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="作者：佚名"
+	    android:gravity="right"/>
+
+</RelativeLayout>

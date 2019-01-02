@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.college"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="24" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/lizhengliang"
+        android:label="My College"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="My College" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SubjectActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <activity
+            android:name=".subject.EnglishActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <activity
+            android:name=".subject.NoneActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <activity
+            android:name=".SchoolWebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <activity
+            android:name=".FinformationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_finformation" >
+        </activity>
+        <activity
+            android:name=".ScanFileActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <activity
+            android:name=".RegistActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <activity
+            android:name=".ChangeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <activity android:name=".LookoverActivity" >
+        </activity>
+        <activity
+            android:name=".EssayActivity"
+            android:label="@string/title_activity_essay" >
+        </activity>
+        <activity
+            android:name=".SchoolfindActivity"
+            android:label="@string/title_activity_schoolfind" >
+        </activity>
+        <activity
+            android:name=".MajorfindActivity"
+            android:label="@string/title_activity_majorfind" >
+        </activity>
+        <activity
+            android:name=".LocalfindActivity"
+            android:label="@string/title_activity_localfind" >
+        </activity>
+        <activity
+            android:name=".CoursefindActivity"
+            android:label="@string/title_activity_coursefind" >
+        </activity>
+        <activity
+            android:name=".Essay1Activity"
+            android:label="@string/title_activity_essay1" >
+        </activity>
+        <activity
+            android:name=".Essay2Activity"
+            android:label="@string/title_activity_essay2" >
+        </activity>
+        <activity
+            android:name=".Essay3Activity"
+            android:label="@string/title_activity_essay3" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg">
+     <TextView
+        android:id="@+id/subject_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:textColor="#000000"
+        android:gravity="center"/>
+    <ListView
+        android:id="@+id/list1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#000"
+        android:dividerHeight="2px"
+        android:headerDividersEnabled="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看已下载资料"
+        android:background="@drawable/button_xian"
+        android:textSize="25sp"
+        android:onClick="lookoverButton"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="上传"
+        android:background="@drawable/button_xian"
+        android:textSize="25sp"
+        android:onClick="uploadButton"/>
+
+</LinearLayout>
